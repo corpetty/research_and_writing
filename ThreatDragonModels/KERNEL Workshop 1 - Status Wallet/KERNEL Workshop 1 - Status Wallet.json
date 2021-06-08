@@ -5,7 +5,11 @@
     "description": "The Status Mobile Wallet is a cryptocurrency wallet (key-manager) within the Status mobile application. It manages the private keys and their use on various cryptocurrent networks on a mobile platform."
   },
   "detail": {
-    "contributors": [],
+    "contributors": [
+      {
+        "name": "Corey Petty"
+      }
+    ],
     "diagrams": [
       {
         "title": "Wallet - Level 0",
