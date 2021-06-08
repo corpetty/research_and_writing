@@ -14,7 +14,536 @@
       {
         "title": "Mobile Wallet - Level 0",
         "thumbnail": "./public/content/images/thumbnail.jpg",
-        "id": 0
+        "id": 0,
+        "diagramJson": {
+          "cells": [
+            {
+              "type": "tm.Actor",
+              "size": {
+                "width": 160,
+                "height": 80
+              },
+              "position": {
+                "x": 91,
+                "y": 239
+              },
+              "angle": 0,
+              "id": "e8c22a4b-9fe4-4c37-a592-7b9578121989",
+              "z": 1,
+              "hasOpenThreats": false,
+              "attrs": {
+                ".element-shape": {
+                  "class": "element-shape hasNoOpenThreats isInScope"
+                },
+                "text": {
+                  "text": "User"
+                },
+                ".element-text": {
+                  "class": "element-text hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Store",
+              "size": {
+                "width": 160,
+                "height": 80
+              },
+              "position": {
+                "x": 1230,
+                "y": 330
+              },
+              "angle": 0,
+              "id": "cd3435ef-6189-4545-8896-8c6e371cc11c",
+              "z": 2,
+              "hasOpenThreats": false,
+              "isEncrypted": true,
+              "storesCredentials": true,
+              "attrs": {
+                ".element-shape": {
+                  "class": "element-shape hasNoOpenThreats isInScope"
+                },
+                "text": {
+                  "text": "Accounts DB"
+                },
+                ".element-text": {
+                  "class": "element-text hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Process",
+              "size": {
+                "width": 100,
+                "height": 100
+              },
+              "position": {
+                "x": 480,
+                "y": 160
+              },
+              "angle": 0,
+              "id": "bcb41aba-5c98-4c42-9b0d-a91294352809",
+              "z": 3,
+              "hasOpenThreats": false,
+              "attrs": {
+                ".element-shape": {
+                  "class": "element-shape hasNoOpenThreats isInScope"
+                },
+                "text": {
+                  "text": "Look-up\naccount"
+                },
+                ".element-text": {
+                  "class": "element-text hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Store",
+              "size": {
+                "width": 160,
+                "height": 80
+              },
+              "position": {
+                "x": 1070,
+                "y": 120
+              },
+              "angle": 0,
+              "id": "bc0fe9c0-10e1-4f62-a8b9-772a902723ad",
+              "z": 4,
+              "hasOpenThreats": false,
+              "attrs": {
+                ".element-shape": {
+                  "class": "element-shape hasNoOpenThreats isInScope"
+                },
+                "text": {
+                  "text": "Account list DB"
+                },
+                ".element-text": {
+                  "class": "element-text hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Flow",
+              "smooth": true,
+              "source": {
+                "id": "bcb41aba-5c98-4c42-9b0d-a91294352809"
+              },
+              "target": {
+                "id": "bc0fe9c0-10e1-4f62-a8b9-772a902723ad"
+              },
+              "vertices": [
+                {
+                  "x": 850,
+                  "y": 140
+                }
+              ],
+              "id": "76c35681-7056-4ffc-bf6d-a659f442ab40",
+              "labels": [
+                {
+                  "position": {
+                    "distance": 0.5014727046868416,
+                    "offset": -12.470387206375529
+                  },
+                  "attrs": {
+                    "text": {
+                      "text": "Query account list",
+                      "font-weight": "400",
+                      "font-size": "small"
+                    }
+                  }
+                }
+              ],
+              "z": 5,
+              "hasOpenThreats": false,
+              "attrs": {
+                ".marker-target": {
+                  "class": "marker-target hasNoOpenThreats isInScope"
+                },
+                ".connection": {
+                  "class": "connection hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Flow",
+              "smooth": true,
+              "source": {
+                "id": "bc0fe9c0-10e1-4f62-a8b9-772a902723ad"
+              },
+              "target": {
+                "id": "bcb41aba-5c98-4c42-9b0d-a91294352809"
+              },
+              "vertices": [
+                {
+                  "x": 850,
+                  "y": 200
+                }
+              ],
+              "id": "15077e82-e031-4e99-9edc-ad7596e5d637",
+              "labels": [
+                {
+                  "position": {
+                    "distance": 0.48423717332111305,
+                    "offset": -2.0164836627858524
+                  },
+                  "attrs": {
+                    "text": {
+                      "text": "return available\naccount list",
+                      "font-weight": "400",
+                      "font-size": "small"
+                    }
+                  }
+                }
+              ],
+              "z": 6,
+              "hasOpenThreats": false,
+              "attrs": {
+                ".marker-target": {
+                  "class": "marker-target hasNoOpenThreats isInScope"
+                },
+                ".connection": {
+                  "class": "connection hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Boundary",
+              "smooth": true,
+              "source": {
+                "x": 990,
+                "y": 60
+              },
+              "target": {
+                "x": 990,
+                "y": 710
+              },
+              "vertices": [
+                {
+                  "x": 992,
+                  "y": 229
+                }
+              ],
+              "id": "fb108ee6-cc9c-49c3-8495-62b2102bb6ee",
+              "z": 7,
+              "attrs": {}
+            },
+            {
+              "type": "tm.Boundary",
+              "smooth": true,
+              "source": {
+                "x": 420,
+                "y": 80
+              },
+              "target": {
+                "x": 420,
+                "y": 730
+              },
+              "vertices": [
+                {
+                  "x": 420,
+                  "y": 160
+                },
+                {
+                  "x": 420,
+                  "y": 520
+                }
+              ],
+              "id": "3d60902b-d94c-48c1-999a-f81324d6411e",
+              "z": 8,
+              "attrs": {}
+            },
+            {
+              "type": "tm.Process",
+              "size": {
+                "width": 100,
+                "height": 100
+              },
+              "position": {
+                "x": 850,
+                "y": 310
+              },
+              "angle": 0,
+              "id": "b899a975-41fd-4bf7-b509-e79cb6845926",
+              "z": 9,
+              "hasOpenThreats": false,
+              "attrs": {
+                ".element-shape": {
+                  "class": "element-shape hasNoOpenThreats isInScope"
+                },
+                "text": {
+                  "text": "Check\npassword"
+                },
+                ".element-text": {
+                  "class": "element-text hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Boundary",
+              "smooth": true,
+              "source": {
+                "x": 690,
+                "y": 60
+              },
+              "target": {
+                "x": 690,
+                "y": 730
+              },
+              "vertices": [],
+              "id": "6a2dc81b-71ab-4a90-857b-0547530ef4b4",
+              "z": 10,
+              "attrs": {}
+            },
+            {
+              "type": "tm.Process",
+              "size": {
+                "width": 100,
+                "height": 100
+              },
+              "position": {
+                "x": 470,
+                "y": 290
+              },
+              "angle": 0,
+              "id": "da2ea14e-c8c5-473d-96a9-977ecf423e3c",
+              "z": 11,
+              "hasOpenThreats": false,
+              "privilegeLevel": "0",
+              "attrs": {
+                ".element-shape": {
+                  "class": "element-shape hasNoOpenThreats isInScope"
+                },
+                "text": {
+                  "text": "Loo"
+                },
+                ".element-text": {
+                  "class": "element-text hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Flow",
+              "smooth": true,
+              "source": {
+                "id": "e8c22a4b-9fe4-4c37-a592-7b9578121989"
+              },
+              "target": {
+                "id": "bcb41aba-5c98-4c42-9b0d-a91294352809"
+              },
+              "vertices": [
+                {
+                  "x": 330,
+                  "y": 150
+                }
+              ],
+              "id": "6d35dcaa-61cb-4d08-b2b0-6c788d639c09",
+              "labels": [
+                {
+                  "position": 0.5,
+                  "attrs": {
+                    "text": {
+                      "text": "Submit login request",
+                      "font-weight": "400",
+                      "font-size": "small"
+                    }
+                  }
+                }
+              ],
+              "z": 12,
+              "hasOpenThreats": false,
+              "attrs": {
+                ".marker-target": {
+                  "class": "marker-target hasNoOpenThreats isInScope"
+                },
+                ".connection": {
+                  "class": "connection hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Flow",
+              "smooth": true,
+              "source": {
+                "id": "b899a975-41fd-4bf7-b509-e79cb6845926"
+              },
+              "target": {
+                "id": "cd3435ef-6189-4545-8896-8c6e371cc11c"
+              },
+              "vertices": [
+                {
+                  "x": 1120,
+                  "y": 310
+                }
+              ],
+              "id": "d3528a13-8f9c-47ed-9c7e-0fccedd6c3a8",
+              "labels": [
+                {
+                  "position": 0.5,
+                  "attrs": {
+                    "text": {
+                      "text": "Query user with\n(salted) password",
+                      "font-weight": "400",
+                      "font-size": "small"
+                    }
+                  }
+                }
+              ],
+              "z": 13,
+              "hasOpenThreats": false,
+              "attrs": {
+                ".marker-target": {
+                  "class": "marker-target hasNoOpenThreats isInScope"
+                },
+                ".connection": {
+                  "class": "connection hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Flow",
+              "smooth": true,
+              "source": {
+                "id": "cd3435ef-6189-4545-8896-8c6e371cc11c"
+              },
+              "target": {
+                "id": "b899a975-41fd-4bf7-b509-e79cb6845926"
+              },
+              "vertices": [
+                {
+                  "x": 1080,
+                  "y": 420
+                }
+              ],
+              "id": "3035ac20-8771-4c8e-a7f7-e23f5fe15c92",
+              "labels": [
+                {
+                  "position": 0.5,
+                  "attrs": {
+                    "text": {
+                      "text": "Return user record",
+                      "font-weight": "400",
+                      "font-size": "small"
+                    }
+                  }
+                }
+              ],
+              "z": 14,
+              "hasOpenThreats": false,
+              "attrs": {
+                ".marker-target": {
+                  "class": "marker-target hasNoOpenThreats isInScope"
+                },
+                ".connection": {
+                  "class": "connection hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Process",
+              "size": {
+                "width": 100,
+                "height": 100
+              },
+              "position": {
+                "x": 870,
+                "y": 550
+              },
+              "angle": 0,
+              "id": "4ae8dc38-4881-4fce-af01-82756c77e6ce",
+              "z": 15,
+              "hasOpenThreats": false,
+              "attrs": {
+                ".element-shape": {
+                  "class": "element-shape hasNoOpenThreats isInScope"
+                },
+                "text": {
+                  "text": "process 14"
+                },
+                ".element-text": {
+                  "class": "element-text hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Flow",
+              "smooth": true,
+              "source": {
+                "id": "b899a975-41fd-4bf7-b509-e79cb6845926"
+              },
+              "target": {
+                "id": "4ae8dc38-4881-4fce-af01-82756c77e6ce"
+              },
+              "vertices": [],
+              "id": "12d1ba0c-42bb-4c13-8ba0-f91a8075bda7",
+              "labels": [
+                {
+                  "position": 0.5,
+                  "attrs": {
+                    "text": {
+                      "text": "Invalid password",
+                      "font-weight": "400",
+                      "font-size": "small"
+                    }
+                  }
+                }
+              ],
+              "z": 16,
+              "hasOpenThreats": false,
+              "attrs": {
+                ".marker-target": {
+                  "class": "marker-target hasNoOpenThreats isInScope"
+                },
+                ".connection": {
+                  "class": "connection hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Flow",
+              "smooth": true,
+              "source": {
+                "id": "4ae8dc38-4881-4fce-af01-82756c77e6ce"
+              },
+              "target": {
+                "id": "e8c22a4b-9fe4-4c37-a592-7b9578121989"
+              },
+              "vertices": [
+                {
+                  "x": 430,
+                  "y": 690
+                }
+              ],
+              "id": "6e2bf1ce-7e95-4033-b50e-18134f327eeb",
+              "labels": [
+                {
+                  "position": 0.5,
+                  "attrs": {
+                    "text": {
+                      "text": "Login failed",
+                      "font-weight": "400",
+                      "font-size": "small"
+                    }
+                  }
+                }
+              ],
+              "z": 17,
+              "hasOpenThreats": false,
+              "attrs": {
+                ".marker-target": {
+                  "class": "marker-target hasNoOpenThreats isInScope"
+                },
+                ".connection": {
+                  "class": "connection hasNoOpenThreats isInScope"
+                }
+              }
+            }
+          ]
+        },
+        "size": {
+          "height": 590,
+          "width": 1392
+        }
       }
     ],
     "reviewer": "Cammellos"
